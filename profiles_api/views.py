@@ -30,4 +30,12 @@ class HelloApiView(APIView):
         else:
             return Response(serializer.errors,
                             status=status.HTTP_400_BAD_REQUEST)
-            
+
+    def put(self,request,pk = None):
+        return Response({"message":"PUT"})            
+
+    def patch(self,request,pk = None):
+        return Response({"message":"PATCH"})
+    
+    def delete(self,request,pk = None):
+        return Response({"message":"DELETE"})
